@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VartaAI Solutions - Custom Chatbot Embed Demo</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+      padding: 100px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+    .badge-demo {
+      background-color: #0f172a;
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="py-3 bg-white border-bottom shadow-sm sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fs-3">💬</span>
+        <h4 class="mb-0 fw-bold">VartaAI Solutions</h4>
+      </div>
+      <div>
+        <a href="http://localhost:5000/admin" target="_blank" class="btn btn-outline-dark btn-sm">
+          <i class="bi bi-shield-lock-fill me-1"></i> Admin Portal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container text-center">
+      <span class="badge-demo mb-3">Live Embed Demonstration</span>
+      <h1 className="display-4" class="fw-bold text-dark mb-3">Your Customers Are Waiting. Let's Talk.</h1>
+      <p class="lead text-secondary max-width-md mx-auto mb-4" style="max-width: 700px;">
+        Varta Assistant is a next-generation floating chatbot widget. It captures user intent, automatically aligns customer profile context, and answers with custom product information instantly.
+      </p>
+      <div class="d-flex justify-content-center gap-3">
+        <button class="btn btn-dark btn-lg px-4 py-2" onclick="document.getElementById('varta-launcher').click()">
+          <i class="bi bi-chat-dots-fill me-2"></i> Launch Demo Chat
+        </button>
+        <a href="#features" class="btn btn-outline-secondary btn-lg px-4 py-2">
+          Explore Features
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Cards -->
+  <section class="py-5" id="features">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Why Varta Assistant?</h2>
+        <p class="text-muted">A lightweight chatbot built for simplicity, speed, and real context matching.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <div class="fs-2 mb-3">⚡</div>
+            <h5 class="fw-bold">Single Script Integration</h5>
+            <p class="text-muted mb-0">Just copy and paste a single script element onto your site. The floating widget initializes and displays instantly.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <div class="fs-2 mb-3">🎯</div>
+            <h5 class="fw-bold">Smart Context Matching</h5>
+            <p class="text-muted mb-0">Onboards visitors by name, profession, and target goals. Integrates profile details dynamically on every LLM prompt query.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card h-100">
+            <div class="fs-2 mb-3">🛡️</div>
+            <h5 class="fw-bold">Admin Portal Included</h5>
+            <p class="text-muted mb-0">Monitor statistics and review transcripts from a clean, secure dashboard locked behind a browser password prompt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Embed Instruction Box -->
+  <section class="py-5 bg-white border-top">
+    <div class="container" style="max-width: 800px;">
+      <div class="card p-4 border shadow-sm">
+        <h5 class="fw-bold mb-3"><i class="bi bi-code-slash me-2"></i>How to embed on your website:</h5>
+        <p class="text-muted small">Insert this tag anywhere inside the <code>&lt;body&gt;</code> container of your HTML files:</p>
+        <pre class="bg-dark text-light p-3 rounded mb-0"><code>&lt;script src="http://localhost:5000/widget.js"&gt;&lt;/script&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-light border-top text-center text-muted">
+    <div class="container">
+      <p class="small mb-1">&copy; 2026 VartaAI Solutions. All rights reserved.</p>
+      <p class="small mb-0">Designed for developers, beginners, and startup builders.</p>
+    </div>
+  </footer>
+
+  <!-- EMBEDDING CHATBOT WIDGET SCRIPT -->
+  <!-- Note: When running the server locally on port 5000, this script injects the chat window automatically! -->
+  <script src="http://localhost:5000/widget.js"></script>
+
+</body>
+</html>

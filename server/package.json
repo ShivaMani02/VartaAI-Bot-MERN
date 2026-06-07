@@ -1,0 +1,19 @@
+{
+  "name": "varta-assistant-server",
+  "version": "1.0.0",
+  "description": "Backend server for Varta Assistant chatbot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "groq-sdk": "^0.3.3",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.2.1"
+  }
+}

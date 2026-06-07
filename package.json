@@ -1,0 +1,14 @@
+{
+  "name": "varta-assistant-root",
+  "version": "1.0.0",
+  "description": "Varta Assistant MERN Workspace",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix frontend",
+    "server": "npm run dev --prefix server",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "npx concurrently \"npm run server\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
