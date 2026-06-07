@@ -87,11 +87,11 @@ export default function WidgetChat() {
         setVisitorName(data.visitorName);
         setConversationId(data.conversationId);
         
-        // Push initial friendly greeting from AI
+        // Push initial friendly greeting from AI tailored to shivanshvasu platform
         setMessages([
           {
             sender: 'ai',
-            text: `Hi **${data.visitorName}**! I'm your Varta AI Assistant. I see you are a **${professionInput}** and want to achieve: *"${goalInput.trim()}"*. How can I help you today?`,
+            text: `Hi **${data.visitorName}**! I'm the AI Guide for **theshivanshvasu** platform. I see you are a **${professionInput}** aiming to: *"${goalInput.trim()}"*. How can I help you navigate our core tracks (DSA 360, Elevate Full Stack, System Design), notes vault, or handbooks today?`,
             createdAt: new Date()
           }
         ]);
@@ -212,15 +212,15 @@ export default function WidgetChat() {
           <div className="d-flex justify-content-between align-items-center pb-3 border-bottom mb-4">
             <div className="d-flex align-items-center gap-2">
               <span className="fs-4">💬</span>
-              <h5 className="mb-0 fw-bold text-dark">Varta Assistant</h5>
+              <h5 className="mb-0 fw-bold text-dark">VaartaAI Chat bot</h5>
             </div>
             <button className="btn btn-sm btn-light border-0" onClick={closeChatWidget} title="Close Widget">
               <i className="bi bi-x-lg text-secondary"></i>
             </button>
           </div>
           <div className="text-center mb-4">
-            <h6 className="fw-semibold text-dark mb-1">Let's personalize your chat!</h6>
-            <p className="small text-muted mb-0">Help us tailor your experience before chatting with the AI.</p>
+            <h6 className="fw-semibold text-dark mb-1">Consistency Tracker Setup</h6>
+            <p className="small text-muted mb-0">Help us guide you to the right course track, sheet, or roadmap.</p>
           </div>
           <form onSubmit={handleOnboardSubmit}>
             <div className="mb-3">
@@ -229,7 +229,7 @@ export default function WidgetChat() {
                 id="onboard-name"
                 type="text"
                 className="form-control"
-                placeholder="e.g. Jane Doe"
+                placeholder="e.g. Alice Smith"
                 value={nameInput}
                 onChange={(e) => setNameInput(e.target.value)}
                 required
@@ -251,12 +251,12 @@ export default function WidgetChat() {
               </select>
             </div>
             <div className="mb-4">
-              <label htmlFor="onboard-goal" className="form-label small fw-medium text-secondary">What is your goal today?</label>
+              <label htmlFor="onboard-goal" className="form-label small fw-medium text-secondary">What is your learning goal today?</label>
               <textarea
                 id="onboard-goal"
                 className="form-control"
                 rows="3"
-                placeholder="e.g. Learn about pricing packages, try a demo project..."
+                placeholder="e.g. Master DSA, learn React/Node full-stack, download OS Notes..."
                 value={goalInput}
                 onChange={(e) => setGoalInput(e.target.value)}
                 required
@@ -266,14 +266,14 @@ export default function WidgetChat() {
               {onboardLoading ? (
                 <>
                   <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                  Setting Up Chat...
+                  Preparing Guide...
                 </>
               ) : 'Start Chatting'}
             </button>
           </form>
         </div>
         <div className="text-center pt-3 border-top mt-4">
-          <small className="text-muted">Secure & instant context-matching AI</small>
+          <small className="text-muted">Consistent learning & structured roadmaps</small>
         </div>
       </div>
     );
@@ -287,7 +287,7 @@ export default function WidgetChat() {
         <div className="d-flex align-items-center gap-2">
           <span className="fs-4">💬</span>
           <div>
-            <h6 className="mb-0 fw-bold text-dark">Varta AI Assistant</h6>
+            <h6 className="mb-0 fw-bold text-dark">VaartaAI Chat bot</h6>
             <span className="badge bg-success-subtle text-success border border-success-subtle py-1" style={{ fontSize: '0.7rem' }}>
               Speaking to {visitorName}
             </span>

@@ -150,7 +150,7 @@ export default function AdminDashboard() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
         <div className="container-fluid px-4">
           <a className="navbar-brand d-flex align-items-center gap-2" href="#">
-            <span>💬</span> <strong>Varta Assistant Admin Portal</strong>
+            <span>💬</span> <strong>Vaarta Admin Portal</strong>
           </a>
           <div className="d-flex gap-2">
             <button onClick={fetchDashboardData} className="btn btn-sm btn-outline-light" disabled={loading} title="Refresh Dashboard">
@@ -262,7 +262,7 @@ export default function AdminDashboard() {
                             borderBottomLeftRadius: isVisitor ? '8px' : '0px',
                           }}>
                             <div className="small fw-bold text-secondary mb-1">
-                              {isVisitor ? (selectedChat.visitorId?.name || 'Visitor') : 'Varta AI Assistant'}
+                              {isVisitor ? (selectedChat.visitorId?.name || 'Visitor') : 'Vaarta AI Guide'}
                             </div>
                             <div style={{ fontSize: '0.95rem', wordBreak: 'break-word', lineHeight: '1.5' }}>
                               {formatMarkdown(msg.text)}
@@ -283,7 +283,7 @@ export default function AdminDashboard() {
             <div className="p-4 flex-grow-1 overflow-auto bg-light">
               <div className="card shadow-sm border-0 bg-white p-4 mb-4">
                 <h4 className="fw-bold text-dark mb-1">Dashboard Analytics</h4>
-                <p className="text-muted">Real-time usage and onboarding stats for your Varta Assistant chatbot.</p>
+                <p className="text-muted">Real-time usage and onboarding stats for your Vaarta chatbot.</p>
                 <hr />
                 
                 {loading ? (
